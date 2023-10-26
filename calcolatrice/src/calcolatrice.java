@@ -312,10 +312,8 @@ public class calcolatrice {
     }
 
     private String traduciRPN(String espressioneInfissa) {
-        // Aggiungi spazi tra operatori e numeri (compresi i numeri con doppia cifra)
         espressioneInfissa = espressioneInfissa.replaceAll("([\\+\\-\\*\\/\\(\\)])", " $1 ");
 
-        // Aggiungi spazi tra cifre contigue in modo che i numeri con doppia cifra siano trattati correttamente
         espressioneInfissa = espressioneInfissa.replaceAll("([0-9]+)", "$1 ");
 
         StringBuilder rpn = new StringBuilder();
